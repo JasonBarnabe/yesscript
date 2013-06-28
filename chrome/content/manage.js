@@ -27,9 +27,9 @@ function treeView() {
 	this.isSorted = function(){ return false; };
 	this.getLevel = function(row){ return 0; };
 	this.getImageSrc = function(row,col){ return null; };
-	this.getRowProperties = function(row,props){};
-	this.getCellProperties = function(row,col,props){};
-	this.getColumnProperties = function(colid,col,props){};
+	this.getRowProperties = function(row){};
+	this.getCellProperties = function(row,col){};
+	this.getColumnProperties = function(colid,col){};
 	this.cycleHeader = function(col, elem) {};
 	this.performAction = function(action) {};
 }
