@@ -1,0 +1,7 @@
+<!ENTITY addSite "Afegeix">
+<!ENTITY addSite.ak "A">
+<!ENTITY delete "Esborra">
+<!ENTITY delete.ak "R">
+<!ENTITY intro "Les properes webs no tenen permís per funcionar amb JavaScript:">
+<!ENTITY site "Web">
+<!ENTITY title "Llista Negra &yesscript;">

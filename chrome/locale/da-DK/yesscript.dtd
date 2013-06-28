@@ -1,0 +1,7 @@
+<!ENTITY addSite "Tilføj">
+<!ENTITY addSite.ak "T">
+<!ENTITY delete "Fjern">
+<!ENTITY delete.ak "F">
+<!ENTITY intro "Følgende sider har ikke lov til at køre JavaScript:">
+<!ENTITY site "Side">
+<!ENTITY title "&yesscript; Blackliste">

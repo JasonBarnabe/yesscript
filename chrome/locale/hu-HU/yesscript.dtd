@@ -1,0 +1,7 @@
+<!ENTITY addSite "Hozzáad">
+<!ENTITY addSite.ak "H">
+<!ENTITY delete "Eltávolít">
+<!ENTITY delete.ak "E">
+<!ENTITY intro "A következő weboldalakon nem engedélyezett a JavaScript futtatása:">
+<!ENTITY site "Weboldal">
+<!ENTITY title "&yesscript; - feketelista">

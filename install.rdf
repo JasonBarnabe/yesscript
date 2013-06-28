@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>yesscript@userstyles.org</em:id>
+		<em:name>YesScript</em:name>
+		<em:description>A JavaScript blacklist</em:description>
+		<em:version>1.9</em:version>
+		<em:creator>Jason Barnabe</em:creator>
+		<em:optionsURL>chrome://yesscript/content/manage.xul</em:optionsURL>
+		<em:iconURL>chrome://yesscript/skin/logo.png</em:iconURL>
+		<em:contributor>Icons from http://www.famfamfam.com/lab/icons/silk/</em:contributor>
+		<em:translator>flag - zh-CN</em:translator>
+		<em:translator>Greener - zh-TW</em:translator>
+		<em:translator>markh - nl-NL</em:translator>
+		<em:translator>nico@nc - fr-FR</em:translator>
+		<em:translator>A.B. - de-DE</em:translator>
+		<em:translator>SiiiE - he-IL</em:translator>
+		<em:translator>Cashman - hu-HU</em:translator>
+		<em:translator>MatrixIsAllOver - it-IT</em:translator>
+		<em:translator>drry - ja-JP</em:translator>
+		<em:translator>wtspout - ko-KR</em:translator>
+		<em:translator>teo - pl-PL</em:translator>
+		<em:translator>humbertosartini - pt-BR</em:translator>
+		<em:translator>[D]aRk - es-ES</em:translator>
+		<em:translator>el_libre - ca-AD</em:translator>
+		<em:translator>MiK546 - fi-FI</em:translator>
+		<em:translator>mendinho - gl-ES</em:translator>
+		<em:translator>moutinho - pt-PT</em:translator>
+		<em:translator>Sid - ru-RU</em:translator>
+		<em:translator>peter3 - sv-SE</em:translator>
+		<em:translator>PetrTwo - cs-CZ</em:translator>
+		<em:translator>AlleyKay - da-DK</em:translator>
+		<em:translator>renegade06 - mk-MK</em:translator>
+		<em:translator>sepol05278 - ms-MY</em:translator>
+		<em:translator>DakSrbija - sr-RS</em:translator>
+		<em:translator>Sappa - uk-UA</em:translator>
+		<em:translator>ArabiCms - ar</em:translator>
+		<em:translator>EduardoLeon - es-AR</em:translator>
+		<em:translator>batuhancetin - tr-TR</em:translator>
+		<em:type>2</em:type>
+		<!-- Firefox -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>3.0</em:minVersion>
+				<em:maxVersion>4.0.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		<!-- Flock -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{a463f10c-3994-11da-9945-000d60ca027b}</em:id>
+				<em:minVersion>2.6</em:minVersion>
+				<em:maxVersion>2.6.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		<!-- SeaMonkey -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+				<em:minVersion>2.0</em:minVersion>
+				<em:maxVersion>2.1b1</em:maxVersion>
+			</Description>
+		</em:targetApplication> 
+	</Description>
+</RDF>

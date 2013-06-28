@@ -1,0 +1,7 @@
+<!ENTITY addSite "Добавить">
+<!ENTITY addSite.ak "Д">
+<!ENTITY delete "Удалить">
+<!ENTITY delete.ak "У">
+<!ENTITY intro "Выполнение JavaScript запрещено на следующих сайтах:">
+<!ENTITY site "Сайт">
+<!ENTITY title "&yesscript; — чёрный список">

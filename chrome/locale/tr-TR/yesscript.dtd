@@ -1,0 +1,7 @@
+<!ENTITY addSite "Ekle">
+<!ENTITY addSite.ak "A">
+<!ENTITY delete "Kaldır">
+<!ENTITY delete.ak "R">
+<!ENTITY intro "Bu sitelerde JavaScript kodu çalıştırılmasına izin verilmiyor:">
+<!ENTITY site "Site">
+<!ENTITY title "&yesscript; Karaliste">

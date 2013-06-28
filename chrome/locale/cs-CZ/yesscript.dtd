@@ -1,0 +1,7 @@
+<!ENTITY addSite "Přidat">
+<!ENTITY addSite.ak "a">
+<!ENTITY delete "Odstranit">
+<!ENTITY delete.ak "r">
+<!ENTITY intro "Následující stránky nemají povoleno spouštět JavaScript:">
+<!ENTITY site "Stránka">
+<!ENTITY title "&yesscript; - Černá listina">

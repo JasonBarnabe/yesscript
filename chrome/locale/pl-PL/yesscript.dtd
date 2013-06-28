@@ -1,0 +1,7 @@
+<!ENTITY addSite "Dodaj">
+<!ENTITY addSite.ak "D">
+<!ENTITY delete "Usuń">
+<!ENTITY delete.ak "U">
+<!ENTITY intro "Poniższe witryny nie mogą uruchamiać skryptów JavaScript">
+<!ENTITY site "Witryna">
+<!ENTITY title "&yesscript; - witryny nieuprawnione">

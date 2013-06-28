@@ -1,0 +1,7 @@
+<!ENTITY addSite "추가">
+<!ENTITY addSite.ak "A">
+<!ENTITY delete "삭제">
+<!ENTITY delete.ak "R">
+<!ENTITY intro "다음 사이트에서 JavaScript작동을 허용하지 않음:">
+<!ENTITY site "사이트">
+<!ENTITY title "&yesscript; 블랙리스트">

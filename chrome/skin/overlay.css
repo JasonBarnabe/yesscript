@@ -1,0 +1,7 @@
+#yesscript-button {
+	list-style-image: url("chrome://yesscript/skin/ok.png");
+}
+#yesscript-button[blacklisted="true"] {
+	list-style-image: url("chrome://yesscript/skin/black.png");
+}
+

@@ -1,0 +1,7 @@
+<!ENTITY addSite "Toevoegen">
+<!ENTITY addSite.ak "T">
+<!ENTITY delete "Verwijderen">
+<!ENTITY delete.ak "V">
+<!ENTITY intro "De volgende sites mogen geen JavaScript uitvoeren:">
+<!ENTITY site "Site">
+<!ENTITY title "&yesscript; Zwarte lijst">

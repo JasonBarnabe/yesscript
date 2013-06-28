@@ -1,0 +1,7 @@
+<!ENTITY addSite "Додај">
+<!ENTITY addSite.ak "Д">
+<!ENTITY delete "Уклони">
+<!ENTITY delete.ak "У">
+<!ENTITY intro "Следеће странице не дозвољавају покретање ЈаваСкрипта:">
+<!ENTITY site "Страница">
+<!ENTITY title "&yesscript; Црни списак">

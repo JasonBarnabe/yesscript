@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://yesscript/skin/overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay [
+	<!ENTITY % yesscript SYSTEM "chrome://yesscript/locale/yesscript.dtd">
+	<!ENTITY % branding SYSTEM "chrome://yesscript/content/branding.dtd">
+	%yesscript;
+	%branding;
+]>
+
+<overlay id="yesscript-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/javascript" src="common.js"/>
+	<script type="application/javascript" src="browserOverlay.js"/>
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="yesscript-strings" src="chrome://yesscript/locale/yesscript.properties"/>
+	</stringbundleset>
+
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="yesscript-button" label="&yesscript;" onclick="if(event.button==0){yesScriptBrowserOverlay.toggle()}" class="toolbarbutton-1"/>
+	</toolbarpalette>
+
+</overlay>

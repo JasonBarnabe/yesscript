@@ -1,0 +1,7 @@
+<!ENTITY addSite "Lisää">
+<!ENTITY addSite.ak "A">
+<!ENTITY delete "Poista">
+<!ENTITY delete.ak "R">
+<!ENTITY intro "Seuraavat sivut eivät saa suorittaa JavaScriptiä">
+<!ENTITY site "Sivu">
+<!ENTITY title "&yesscript; Musta lista">

@@ -1,0 +1,7 @@
+<!ENTITY addSite "追加">
+<!ENTITY addSite.ak "A">
+<!ENTITY delete "除去">
+<!ENTITY delete.ak "R">
+<!ENTITY intro "次のサイトは JavaScript の実行が許可されていません:">
+<!ENTITY site "サイト">
+<!ENTITY title "&yesscript; ブラックリスト">

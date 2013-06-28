@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://yesscript/skin/manage.css" type="text/css"?>
+
+<!DOCTYPE dialog [
+	<!ENTITY % yesscript SYSTEM "chrome://yesscript/locale/yesscript.dtd">
+	<!ENTITY % branding SYSTEM "chrome://yesscript/content/branding.dtd">
+	%yesscript;
+	%branding;
+]>
+
+<dialog
+	id="yesscript"
+	title="&title;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	persist="screenX screenY width height sizemode"
+	buttons="none">
+	
+	<script type="application/javascript" src="common.js"/>
+	<script type="application/javascript" src="manage.js"/>
+
+	<stringbundle id="yesscript-strings" src="chrome://yesscript/locale/yesscript.properties"/>
+
+	<description>
+		&intro;
+	</description>
+
+	<hbox>
+		<textbox id="add" onkeypress="addKeyPress(event)" oninput="addInput(event)" flex="1"/>
+		<button id="add-button" label="&addSite;" accesskey="&addSite.ak;" oncommand="addSite()" disabled="true"/>
+	</hbox>
+
+	<tree flex="1" id="site-list-tree" seltype="multiple" onselect="changeSelection()" onkeypress="siteListKeyPress(event)" hidecolumnpicker="true">
+		<treecols>
+			<treecol flex="1" id="site-column" label="&site;" persist="width ordinal hidden"/>
+		</treecols>
+		<treechildren id="site-list"/>
+	</tree>
+
+	<hbox>
+		<button id="delete" label="&delete;" accesskey="&delete.ak;" oncommand="deleteSiteList()" disabled="true"/>
+		<spacer flex="1"/>
+	</hbox>
+</dialog>

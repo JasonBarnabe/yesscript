@@ -1,0 +1,7 @@
+<!ENTITY addSite "Ajouter">
+<!ENTITY addSite.ak "A">
+<!ENTITY delete "Supprimer">
+<!ENTITY delete.ak "S">
+<!ENTITY intro "Les sites suivants ne sont pas autorisés à exécuter du JavaScript :">
+<!ENTITY site "Site">
+<!ENTITY title "Liste noire &yesscript;">

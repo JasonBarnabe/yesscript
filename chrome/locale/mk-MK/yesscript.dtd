@@ -1,0 +1,7 @@
+<!ENTITY addSite "Додади">
+<!ENTITY addSite.ak "Д">
+<!ENTITY delete "Отстрани">
+<!ENTITY delete.ak "О">
+<!ENTITY intro "На следните страници не им е дозволено да извршуваат JavaScript:">
+<!ENTITY site "Страница">
+<!ENTITY title "&yesscript; Blacklist">

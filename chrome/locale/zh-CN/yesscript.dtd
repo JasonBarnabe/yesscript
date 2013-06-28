@@ -1,0 +1,7 @@
+<!ENTITY addSite "增加">
+<!ENTITY addSite.ak "A">
+<!ENTITY delete "移除">
+<!ENTITY delete.ak "R">
+<!ENTITY intro "下面的站点不允许执行 JavaScript：">
+<!ENTITY site "站点">
+<!ENTITY title "&yesscript; 黑名单">

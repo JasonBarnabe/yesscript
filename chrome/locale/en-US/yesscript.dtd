@@ -1,0 +1,7 @@
+<!ENTITY addSite "Add">
+<!ENTITY addSite.ak "A">
+<!ENTITY delete "Remove">
+<!ENTITY delete.ak "R">
+<!ENTITY intro "The following sites are not allowed to run JavaScript:">
+<!ENTITY site "Site">
+<!ENTITY title "&yesscript; Blacklist">
