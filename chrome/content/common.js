@@ -1,24 +1,26 @@
 var yesScriptCommon = {
 
 	sites: [],
-	prefs: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("capability.policy."),
+	prefs: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService),
 	io: Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService),
 	prompts: Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces.nsIPromptService),
 	panel: null,
 	updateCallbacks: [],
 	strings: null,
-  unicodeConverter: Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].createInstance(Components.interfaces.nsIScriptableUnicodeConverter),
+	unicodeConverter: Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].createInstance(Components.interfaces.nsIScriptableUnicodeConverter),
+	useCaps: !("nsIDomainPolicy" in Components.interfaces),
 
 	init: function() {
+		yesScriptCommon.prefName = yesScriptCommon.useCaps ? "capability.policy.yesscript.sites" : "extensions.yesscript.sites";
 		yesScriptCommon.unicodeConverter.charset = "UTF-8";
 		yesScriptCommon.strings = document.getElementById("yesscript-strings");
-		yesScriptCommon.prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
-		yesScriptCommon.prefs.addObserver("yesscript.sites", yesScriptCommon, false);
+		yesScriptCommon.prefs.QueryInterface(Components.interfaces.nsIPrefBranch);
+		yesScriptCommon.prefs.addObserver(yesScriptCommon.prefName, yesScriptCommon, false);
 		yesScriptCommon.reload();
 	},
 
 	shutdown: function() {
-		yesScriptCommon.prefs.removeObserver("yesscript.sites", yesScriptCommon);
+		yesScriptCommon.prefs.removeObserver(yesScriptCommon.prefName, yesScriptCommon);
 	},
 
 	observe: function(subject, topic, data) {
@@ -60,7 +62,7 @@ var yesScriptCommon = {
 
 	reload: function() {
 		//recreate from the pref, converting to unicode, filtering out whitespace and empty strings, and sorting
-		var cleanSites = yesScriptCommon.prefs.getCharPref("yesscript.sites").split(" ");
+		var cleanSites = yesScriptCommon.prefs.getCharPref(yesScriptCommon.prefName).split(" ");
 		for (var i = 0; i < cleanSites.length; i++) {
 			cleanSites[i] = this.unicodeConverter.ConvertToUnicode(cleanSites[i]);
 		}
@@ -83,7 +85,7 @@ var yesScriptCommon = {
 		} else {
 			yesScriptCommon.sites.splice(yesScriptCommon.sites.indexOf(currentBlacklistUrl), 1);
 		}
-		yesScriptCommon.prefs.setCharPref("yesscript.sites", yesScriptCommon.getPrefString());
+		yesScriptCommon.prefs.setCharPref(yesScriptCommon.prefName, yesScriptCommon.getPrefString());
 	},
 
 	getPrefString: function() {
@@ -97,12 +99,6 @@ var yesScriptCommon = {
 	cleanURI: function(uri) {
 		//convert from unicode for IDN. not something that complicated, but i figured out that i had to do it from NoScript's code
 		return this.unicodeConverter.ConvertFromUnicode(uri);
-	},
-
-	dump: function() {
-		alert("policynames: '" + yesScriptCommon.prefs.getCharPref("policynames") + "'\n" +
-					"yesscript.sites: '" + yesScriptCommon.prefs.getCharPref("yesscript.sites") + "'\n" +
-					"yesscript.javascript.enabled: '" + yesScriptCommon.prefs.getCharPref("yesscript.javascript.enabled") + "'");
 	}
 }
 
