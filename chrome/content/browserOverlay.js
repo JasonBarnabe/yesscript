@@ -10,7 +10,7 @@ var yesScriptBrowserOverlay = {
 		yesScriptBrowserOverlay.panel = document.getElementById("yesscript-panel");
 		//update the status...
 		//when a document begins loading
-		gBrowser.addProgressListener(yesScriptBrowserOverlay, Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT); 
+		gBrowser.addProgressListener(yesScriptBrowserOverlay); 
 		//when the active tab changes
 		gBrowser.tabContainer.addEventListener("TabSelect", yesScriptBrowserOverlay.updateStatus, false);
 		//when the pref changes
@@ -52,11 +52,11 @@ var yesScriptBrowserOverlay = {
 	onSecurityChange: function() {},
 	onLinkIconAvailable: function() {},
 
-  onPageLoad: function(aEvent) {
+	onPageLoad: function(aEvent) {
 		if (aEvent.originalTarget == content.document) {
 			yesScriptBrowserOverlay.updateStatus();
 		}
-  },
+	},
 
 	updateStatus: function() {
 		var blacklisted = yesScriptCommon.isBlacklisted(content.document.location.href) != null;
