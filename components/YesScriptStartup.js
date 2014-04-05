@@ -88,7 +88,7 @@ var YesScriptPrefListener = {
 				var uri = io.newURI(site, null, null);
 				that.domainPolicy.blacklist.add(uri);
 			} catch (ex) {
-				Components.utils.reportError(ex);
+				Components.utils.reportError("Could not block '" + site + "': " + ex);
 			}
 		});
 	}
