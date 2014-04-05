@@ -18,15 +18,22 @@ var yesScriptBrowserOverlay = {
 		//right now
 		yesScriptBrowserOverlay.updateStatus();
 
-		var prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).QueryInterface(Components.interfaces.nsIPrefBranch2);
+		var prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).QueryInterface(Components.interfaces.nsIPrefBranch);
 		switch (prefService.getIntPref("extensions.yesscript.firstRun")) {
 			case 0:
-				// add to addon bar
-				var addonBar = document.getElementById("addon-bar");
+				// add to nav bar
+				var navbar = document.getElementById("nav-bar");
 				var button = document.getElementById("yesscript-button");
-				if (addonBar && !button) {
-					addonBar.currentSet = ["yesscript-button"].concat(addonBar.currentSet.split(",")).join(",");
-					addonBar.collapsed = false;
+				if (navbar && !button) {
+					var newCurrentSet = navbar.currentSet.split(",").concat(["yesscript-button"]).join(",");
+					navbar.currentSet = newCurrentSet; // for immediate display
+					navbar.setAttribute("currentset", newCurrentSet); // for persisting
+					document.persist(navbar.id, "currentset");
+					try {
+						BrowserToolboxCustomizeDone(true);
+					} catch (e) {
+						Components.utils.reportError(e);
+					}
 				}
 				prefService.setIntPref("extensions.yesscript.firstRun", 1);
 		}
