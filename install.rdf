@@ -4,7 +4,7 @@
 		<em:id>yesscript@userstyles.org</em:id>
 		<em:name>YesScript</em:name>
 		<em:description>A JavaScript blacklist</em:description>
-		<em:version>1.9.1</em:version>
+		<em:version>2.0</em:version>
 		<em:creator>Jason Barnabe</em:creator>
 		<em:optionsURL>chrome://yesscript/content/manage.xul</em:optionsURL>
 		<em:iconURL>chrome://yesscript/skin/logo.png</em:iconURL>
@@ -43,7 +43,7 @@
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>13.0</em:minVersion>
-				<em:maxVersion>30.0</em:maxVersion>
+				<em:maxVersion>32.0</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 		<!-- SeaMonkey -->
@@ -51,7 +51,7 @@
 			<Description>
 				<em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
 				<em:minVersion>2.10</em:minVersion>
-				<em:maxVersion>2.25</em:maxVersion>
+				<em:maxVersion>2.29</em:maxVersion>
 			</Description>
 		</em:targetApplication> 
 	</Description>
