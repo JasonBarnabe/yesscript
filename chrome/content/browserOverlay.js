@@ -10,7 +10,7 @@ var yesScriptBrowserOverlay = {
 		yesScriptBrowserOverlay.panel = document.getElementById("yesscript-panel");
 		//update the status...
 		//when a document begins loading
-		gBrowser.addProgressListener(yesScriptBrowserOverlay); 
+		gBrowser.addProgressListener(yesScriptBrowserOverlay);
 		//when the active tab changes
 		gBrowser.tabContainer.addEventListener("TabSelect", yesScriptBrowserOverlay.updateStatus, false);
 		//when the pref changes
@@ -49,41 +49,39 @@ var yesScriptBrowserOverlay = {
 	},
 	onLocationChange: function(progress, request, uri) {
 		//if it's the current tab that changed, update the status
-		if (uri && uri.spec == content.document.location.href) {
+		if (uri && uri.spec == yesScriptBrowserOverlay.currentURI.spec) {
 			yesScriptBrowserOverlay.updateStatus();
 		}
 	},
 	onStateChange: function() {},
-  onProgressChange: function() {},
+	onProgressChange: function() {},
 	onStatusChange: function() {},
 	onSecurityChange: function() {},
 	onLinkIconAvailable: function() {},
 
-	onPageLoad: function(aEvent) {
-		if (aEvent.originalTarget == content.document) {
-			yesScriptBrowserOverlay.updateStatus();
-		}
-	},
-
 	updateStatus: function() {
-		var blacklisted = yesScriptCommon.isBlacklisted(content.document.location.href) != null;
+		var blacklisted = yesScriptCommon.isBlacklisted(yesScriptBrowserOverlay.currentURI.spec) != null;
 		var key = blacklisted ? "blacklisted" : "notBlacklisted";
 		if (yesScriptBrowserOverlay.panel) {
 			yesScriptBrowserOverlay.panel.setAttribute("src", blacklisted ? "chrome://yesscript/skin/black.png" : "chrome://yesscript/skin/ok.png");
-			yesScriptBrowserOverlay.panel.setAttribute("tooltiptext", yesScriptCommon.strings.getFormattedString(key, [yesScriptCommon.getSiteString(content.document.location.href)]));
+			yesScriptBrowserOverlay.panel.setAttribute("tooltiptext", yesScriptCommon.strings.getFormattedString(key, [yesScriptCommon.getSiteString(yesScriptBrowserOverlay.currentURI.spec)]));
 			yesScriptBrowserOverlay.panel.setAttribute("blacklisted", blacklisted);
 		} else if (yesScriptBrowserOverlay.button) {
-			yesScriptBrowserOverlay.button.setAttribute("tooltiptext", yesScriptCommon.strings.getFormattedString(key, [yesScriptCommon.getSiteString(content.document.location.href)]));
+			yesScriptBrowserOverlay.button.setAttribute("tooltiptext", yesScriptCommon.strings.getFormattedString(key, [yesScriptCommon.getSiteString(yesScriptBrowserOverlay.currentURI.spec)]));
 			yesScriptBrowserOverlay.button.setAttribute("blacklisted", blacklisted);
 		}
 	},
 
 	toggle: function() {
 		if (yesScriptBrowserOverlay.panel) {
-			yesScriptCommon.blacklist(content.document.location.href, !(yesScriptBrowserOverlay.panel.getAttribute("blacklisted") == "true"));
+			yesScriptCommon.blacklist(yesScriptBrowserOverlay.currentURI.spec, !(yesScriptBrowserOverlay.panel.getAttribute("blacklisted") == "true"));
 		} else if (yesScriptBrowserOverlay.button) {
-			yesScriptCommon.blacklist(content.document.location.href, !(yesScriptBrowserOverlay.button.getAttribute("blacklisted") == "true"));
+			yesScriptCommon.blacklist(yesScriptBrowserOverlay.currentURI.spec, !(yesScriptBrowserOverlay.button.getAttribute("blacklisted") == "true"));
 		}
+	},
+
+	get currentURI() {
+		return gBrowser.currentURI;
 	}
 
 }
