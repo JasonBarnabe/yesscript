@@ -4,7 +4,7 @@
 		<em:id>yesscript@userstyles.org</em:id>
 		<em:name>YesScript</em:name>
 		<em:description>A JavaScript blacklist</em:description>
-		<em:version>2.0</em:version>
+		<em:version>2.0b1</em:version>
 		<em:creator>Jason Barnabe</em:creator>
 		<em:optionsURL>chrome://yesscript/content/manage.xul</em:optionsURL>
 		<em:iconURL>chrome://yesscript/skin/logo.png</em:iconURL>
