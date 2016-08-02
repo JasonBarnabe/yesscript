@@ -9,6 +9,7 @@
 		<em:optionsURL>chrome://yesscript/content/manage.xul</em:optionsURL>
 		<em:iconURL>chrome://yesscript/skin/logo.png</em:iconURL>
 		<em:contributor>Icons from http://www.famfamfam.com/lab/icons/silk/</em:contributor>
+		<em:multiprocessCompatible>true</em:multiprocessCompatible>
 		<em:translator>flag - zh-CN</em:translator>
 		<em:translator>Greener - zh-TW</em:translator>
 		<em:translator>markh - nl-NL</em:translator>
@@ -43,7 +44,7 @@
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>13.0</em:minVersion>
-				<em:maxVersion>40.0</em:maxVersion>
+				<em:maxVersion>51.0</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 		<!-- SeaMonkey -->
@@ -51,7 +52,7 @@
 			<Description>
 				<em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
 				<em:minVersion>2.10</em:minVersion>
-				<em:maxVersion>2.37</em:maxVersion>
+				<em:maxVersion>2.48</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 		<!-- Pale Moon -->
