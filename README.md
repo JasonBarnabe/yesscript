@@ -1,4 +1,8 @@
-YesScript lets you easily block websites from running JavaScript. Useful for sites who abuse JavaScript, not so useful for security.
+YesScript lets you easily block websites from running JavaScript. Useful for sites that abuse JavaScript, not so useful for security.
+
+## For Firefox up to version 56 only!
+
+For Firefox 57 and newer see https://github.com/log69/yesscript2
 
 ## Block or unblock a site
 
